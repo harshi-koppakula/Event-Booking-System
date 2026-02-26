@@ -1,0 +1,334 @@
+/* ================= GLOBAL HOME ================= */
+
+.home {
+  min-height: 100vh;
+  background: #0d0d0d;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Grain overlay */
+.home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  width: fit-content;
+  margin: 30px auto;
+  padding: 12px 30px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  border-radius: 50px;
+  background: #000;
+  box-shadow: 0 0 25px rgba(198, 255, 0, 0.08);
+  z-index: 10;
+  position: relative;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+  color: #c6ff00;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links span {
+  color: #ccc;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-links span:hover {
+  color: white;
+}
+
+.signup-btn {
+  background: #c6ff00;
+  border: none;
+  padding: 8px 22px;
+  border-radius: 40px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.signup-btn:hover {
+  box-shadow: 0 0 20px #c6ff00;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  text-align: center;
+  margin-top: 120px;
+}
+
+.hero h1 {
+  font-size: 80px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #9a9a9a;
+  margin-bottom: 40px;
+}
+
+.search-box {
+  width: 60%;
+  margin: 0 auto 40px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 18px 25px;
+  border-radius: 50px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  color: white;
+  outline: none;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  padding: 10px 24px;
+  border-radius: 40px;
+  border: none;
+  background: #1a1a1a;
+  color: #aaa;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.category-btn:hover {
+  background: #2a2a2a;
+  color: white;
+}
+
+.no-events {
+  margin-top: 60px;
+  color: #777;
+}
+
+/* ================= CALENDAR PAGE ================= */
+
+.calendar-page {
+  padding: 40px 80px;
+}
+
+.calendar-main-title {
+  font-size: 60px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.calendar-layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* LEFT CALENDAR CARD */
+
+.calendar-card {
+  flex: 2;
+  background: #2a2a2a;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.calendar-header h2 {
+  font-size: 28px;
+}
+
+.calendar-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.calendar-controls button {
+  background: #3a3a3a;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+}
+
+/* WEEK HEADER */
+
+.calendar-week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 15px;
+}
+
+.week-day {
+  text-align: center;
+  color: #aaa;
+}
+
+/* CALENDAR GRID */
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 15px;
+}
+
+.calendar-day {
+  height: 80px;
+  background: #3a3a3a;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.calendar-day:hover {
+  background: #4a4a4a;
+}
+
+.active-day {
+  background: #c6ff00;
+  color: black;
+  font-weight: bold;
+  box-shadow: 0 0 20px #c6ff00;
+}
+
+/* RIGHT SIDE PANEL */
+
+.calendar-side-card {
+  flex: 1;
+  background: #2a2a2a;
+  padding: 30px;
+  border-radius: 20px;
+  min-height: 250px;
+}
+
+.calendar-side-card h3 {
+  margin-bottom: 20px;
+}
+
+.calendar-side-card p {
+  color: #aaa;
+}
+
+/* ================= AUTH (LOGIN / SIGNUP) ================= */
+
+.auth-wrapper {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-card {
+  width: 420px;
+  background: #111;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+}
+
+.auth-card h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.auth-card p {
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.auth-card label {
+  display: block;
+  margin-bottom: 8px;
+  margin-top: 15px;
+}
+
+.auth-card input,
+.auth-card select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: #222;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 16px;
+  margin-top: 20px;
+  background: #c6ff00;
+  border: none;
+  border-radius: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-button:hover {
+  box-shadow: 0 0 25px #c6ff00;
+}
+
+.auth-footer {
+  margin-top: 20px;
+  text-align: center;
+  color: #aaa;
+}
+
+.auth-footer span {
+  color: #c6ff00;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+  .calendar-layout {
+    flex-direction: column;
+  }
+
+  .calendar-page {
+    padding: 30px;
+  }
+
+  .hero h1 {
+    font-size: 50px;
+  }
+}
